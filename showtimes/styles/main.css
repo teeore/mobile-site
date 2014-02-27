@@ -1,0 +1,789 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+img{
+    border:0;
+}
+
+body , html {
+	height:100%;
+}
+
+body{
+    background:#f1f0f0;
+    color:#000;
+    font-family: 'cambria', arial, sans-serif;
+    -webkit-text-size-adjust:none;
+    overflow:scroll;
+}
+
+#head{
+    background:#000;
+    display:block;
+    text-align:center;
+}
+#head img{
+    width:100%;
+    display:block;
+    margin:0 auto;
+}
+.copyright {
+    font-family: 'cambria', arial, sans-serif;
+    font-size:9px;
+    font-weight:bold;
+    text-align:center;
+    color:#000;
+    margin-top: 7px;
+}
+#ratings {
+    text-align:center;
+	color:#000;
+}
+#ratings a {
+    font-family: 'cambria', arial, sans-serif;
+    font-size:9px;
+    font-weight:bold;
+    text-align:center;
+    color:#000;
+}
+#back-copy{
+    font-family: 'cambria', arial, sans-serif;
+    font-size:9px;
+    text-align:center;
+    padding:2px 0;
+    color:#000;
+}
+#back-copy a{
+    color:#000;
+    text-decoration:none;
+}
+#purchase-note{
+    font-size:9px;
+    font-weight:bold;
+    text-align:center;
+    color:#fff;
+    margin-top: 5px;
+    padding: 5px 0 5px 0;
+}
+#search-bar{
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    padding-top:5px;
+    background-image:url(../images/bg-showtimes-header.gif);
+	background-repeat:repeat-x;
+	/*background-color:#141414;*/
+}
+#search-desc{
+    font-size:16px;
+	font-family: helverica, arial, sans-serif;
+    text-align:center;
+    color:#fff;
+}
+
+#search-date {
+    font-size:16px;
+	font-family: helverica, arial, sans-serif;     
+    color:#fff;
+	font-weight:bold;
+	text-transfrom:none;
+	top: 1px;
+    position: relative;
+}
+
+.hidden{
+    display:none;
+}
+#search-form{
+    padding:5px 0 5px 5px;
+    margin:0 auto;
+    overflow:hidden;
+    width:400px;
+    text-align:center;
+}
+#search-form input,
+#search-form select,
+#search-form label{
+    float:left;
+    margin-right:6px;
+
+}
+#search-form label{
+    padding-top:6px;
+    font-weight:bold;
+    font-size:11px;
+	color:#fff;
+}
+#zip{
+    font-size:12px;
+    display:block;
+    height:19px;
+    width:55px;
+    text-align: center;
+}
+.def-blur{
+    color:#686868;
+}
+select,
+select option{
+    font-size:11px;
+}
+#date{
+    height:23px;	
+}
+#month{
+    width:63px;
+}
+#day{
+    width:54px;
+}
+#year{
+    width:59px;
+}
+#search-btn{
+    float:left;
+    font-size:10px;
+    display:block;
+    margin:0;
+	margin-top:0px;
+    width:60px;
+	}
+#listings table{
+    font-size:10px;
+    width:100%;
+	background-color:red;
+}
+#listings .directions{
+    text-align:center;
+    margin:0 auto;
+    padding:5px 0;
+    display:block;
+	color:#000;
+}
+#listings .no-listings{
+    text-align:center;
+    margin:0 auto;
+    padding:5px 0;
+    display:block;
+}
+#listings .error{
+    font-family:Helvetica Arial, sans-serif;
+    text-align:center;
+    margin:0 auto;
+    padding:5px 0;
+    display:block;
+    color:red;
+}
+#listings .loading{
+    margin:0 auto;
+    width:16px;
+    height:16px;
+    display:block;
+    padding-top:10px;
+}
+
+#listings .odd{
+    background-color:#949494;
+}
+#listings .even{
+    background-color:#4b4c4c;
+}
+#listings .theater-name{
+    text-align:left;
+    width:105px;
+    color:#fff;
+    font-weight:bold;
+    padding:5px;
+    border-bottom:3px solid #000;	
+}
+#listings .times{
+    padding:5px;
+    border-bottom:3px solid #000;
+}
+#listings .times li{
+    float:left;
+    width:49px;
+    display:block;
+    height:20px;
+    font-size:10px;
+    text-align:center;
+    margin:0 2px 5px 0;
+	text-decoration:underline;
+	color:#fff;
+}
+#listings .times li a{
+    color:#fff;
+    text-decoration:underline;
+    /*background: url(../images/bg-times.gif) repeat-x left top;*/
+   /* border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;*/
+    display: block;
+    width: 46px;
+    padding: 2px 0;
+    text-decoration:none;
+}
+
+#listings .times li a.past{
+    color:#c2c2c2;
+    text-decoration:underline;
+}
+select#year {
+    display: none;
+}
+
+@media only screen and (orientation:landscape){
+    #listings .theater-name{
+        width:180px;
+    }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    #listings table{
+        font-size:10px;
+        width:100%;
+    }
+    #listings .directions{
+        text-align:center;
+        margin:0 auto;
+        padding:5px 0;
+        display:block;
+    }
+    #listings .no-listings{
+        text-align:center;
+        margin:0 auto;
+        padding:5px 0;
+        display:block;
+    }
+    #listings .error{
+        text-align:center;
+        margin:0 auto;
+        padding:5px 0;
+        display:block;
+        color:red;
+    }
+    #listings .loading{
+        margin:0 auto;
+        width:16px;
+        height:16px;
+        display:block;
+        padding-top:10px;
+    }
+
+    #listings .odd{
+        background-color:#949494;
+        border-bottom:5px solid #000000;
+    }
+    #listings .even{
+        background-color:#4b4c4c;
+        border-bottom:5px solid #000;
+    }
+    #listings .theater-name{
+        text-align:left;
+        width:105px;
+        color:#9b9b9b;
+        font-weight:bold;
+        padding:5px;
+    }
+    #listings .times{
+        padding:5px;
+    }
+    #listings .times li{
+        float:left;
+        width:46px;
+        display:block;
+        height:20px;
+        font-size:10px;
+        text-align:center;
+    }
+    #listings .times li a{
+        color:#fff;
+    }
+    #listings .times li a.past{
+        color:#585858;
+    }
+
+}
+
+.hideme {
+    display: none;	
+}
+
+#date option {
+	width:60px;
+}
+
+#reward-url {
+	height:35px;
+	width:100%;
+    overflow:hidden;
+    text-align:left; 
+	margin-top: -35px;
+	margin-left: 2%;
+	z-index: 10000;
+	position: relative;
+}
+
+#reward-url  a {
+	text-align:left;
+	color: white;
+	text-decoration: none;
+	font-family: 'BankGothicMdBTMedium';
+	font-size: 10px;
+	float: left;
+	margin-top: 10px;
+	text-decoration:underline;
+}
+
+
+#reward {
+	display:inline-block;
+	width:35px;
+	height:35px;
+	background:url(../images/seal.png) 0px 0px no-repeat;
+	float:left;
+	margin-left:10px;
+}
+
+.android {
+	min-height:100%;
+	heigth:100%;
+}
+
+.android   #reward-url  {
+	 width:90%;   
+	 margin-top: -30px;
+	 margin-left:8%;
+	 height:30px;   
+}
+
+.android   #reward-url a {
+	width:75%; 
+    font-size: 8px;
+}
+
+.android  #reward {
+	margin-left:0px;
+	background-size: 25px 25px;
+	width:25px;
+	height:25px;
+} 
+
+#sony-rewards {
+	display: block;
+	height: 80px;
+	margin-top: -82px;
+	background: none !important;
+	position: relative;
+	z-index: 10;
+} 
+
+
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+{
+     
+	#head img{
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	#search-bar{
+		border: none;
+		background: url(../images/bg-showtimes-header-ipad.gif) repeat-x left top;
+	}
+
+	#back-copy{
+		background: #1B2B2E;
+		border-bottom: 1px solid #000;
+		font-size: 16px;
+		padding: 5px 0;
+	}
+
+	#search-form{
+		width: 630px;
+		margin-top:7px;
+	}
+	
+	#zip{
+		font-size: 16px;
+		padding: 5px 0;
+		width: 180px;
+		text-align: center;
+		height:22px;
+	}
+	#date {
+		height:35px;
+	}
+	#search-form input,
+	#search-form select {
+		margin-right: 7px;
+	}
+	#search-form label{
+		padding-top:9px;
+	}
+
+	#search-form select {
+		font-size: 16px;
+		padding: 5px 0;
+	}
+	#month{
+		width: 100px;
+	}
+	#day{
+		width: 100px;
+	}
+	#year{
+		width: 100px;
+	}
+	#search-btn {
+		width: 60px;		
+	}
+	#purchase-note{
+		border-top: 1px solid #424242;
+		font-size: 9px;
+		font-weight:bold;
+		color:#000;
+		margin-top: 5px;
+		padding: 5px 0 5px 0;		
+	}
+	#listings .odd {
+		background-color:#949494;
+		padding: 10px 0;
+		border-bottom:5px solid #000000;
+		margin-bottom: 5px;
+	}
+	#listings .even {
+		background-color:#4b4c4c;
+		padding: 10px 0;
+		border-bottom:5px solid #000000;
+		margin-bottom: 5px;
+	}
+	#listings .theater-name{
+		font-family: 'Helvetica Neue', Helvetica, sans-serf;
+		text-align: left;
+		width: 230px;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		padding-left: 30px;
+	}
+	
+	#listings .times{
+	}
+	
+	#listings .times li{
+		float: left;
+		display: block;
+		font-size: 15px;
+		height: auto;
+		margin-bottom: 5px;
+		margin-right: 7px;
+		text-align: center;
+		width: auto;
+	}
+	#listings .times li a{
+		background: url(../images/bg-times.gif) repeat-x left top;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		color: #fff;
+		display: block;
+		width: 110px;
+		padding: 8px 0;
+	}
+	
+	#listings .times li a.past{
+		background: #1E1D1D;
+		color: #bab6b6;
+	}
+	
+	#reward-url  {
+	     width:90%;   
+		 margin-top:-40px;
+		 margin-left:80px;
+		 height:30px;
+ 	}
+	
+     #reward-url  a {
+		 width:500px;
+		 font-size: 12px;	
+ 	 }
+	
+	#reward {
+		margin-left:0px;
+	    background-size: 30px  30px;
+		width:30px;
+		height:30px;
+	}
+	 
+}
+
+/* --------- ipad portrait and landscape -------------  */
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)
+
+{
+
+
+  
+	#head{
+	 
+	}
+	#head img{
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+	#search-bar{
+		border: none;
+		background: url(../images/bg-showtimes-header-ipad.gif) repeat-x left top;
+	}
+
+	#back-copy{
+		background: #1B2B2E;
+		border-bottom: 1px solid #000;
+		font-size: 16px;
+		padding: 5px 0;
+	}
+	 
+	#search-form{
+		width: 630px;
+	}
+	#zip{
+		font-size: 16px;
+		padding: 5px 0;
+		width: 180px;
+		text-align: center;
+		height:22px;
+	}
+	#date {
+		height:35px;
+	}
+	#search-form input,
+	#search-form select {
+		margin-right: 7px;
+	}
+	#search-form label{
+		padding-top:9px;
+	}
+
+	#search-form select {
+		font-size: 16px;
+		padding: 5px 0;
+	}
+	#month{
+		width: 100px;
+	}
+	#day{
+		width: 100px;
+	}
+	#year{
+		width: 100px;
+	}
+	#search-btn {
+		width: 60px;
+		
+	}
+	#purchase-note{
+		border-top: 1px solid #424242;
+		font-size: 9px;
+		font-weight:bold;
+		color:#000;
+		margin-top: 5px;
+		padding: 5px 0 5px 0;
+	}
+	#listings .odd {
+		background-color:#949494;
+		padding: 10px 0;
+		border-bottom:5px solid #000000;
+		margin-bottom: 5px;
+	}
+	#listings .even {
+		background-color:#4b4c4c;
+		padding: 10px 0;
+		border-bottom:5px solid #000000;
+		margin-bottom: 5px;
+	}
+	
+	#listings .theater-name{
+		font-family: 'Helvetica Neue', Helvetica, sans-serf;
+		text-align: left;
+		width: 230px;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		padding-left: 30px;
+	}
+ 
+	#listings .times li{
+		float: left;
+		display: block;
+		font-size: 15px;
+		height: auto;
+		margin-bottom: 5px;
+		margin-right: 7px;
+		text-align: center;
+		width: auto;
+	}
+	#listings .times li a{
+		background: url(../images/bg-times.gif) repeat-x left top;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		color: #fff;
+		display: block;
+		width: 110px;
+		padding: 8px 0;
+	}
+	
+	#listings .times li a.past{
+		background: #1E1D1D;
+		color: #bab6b6;
+	} 
+	
+	#reward-url  {
+	     width:90%;   
+		 margin-top:-30px;
+		 margin-left:70px;
+		 height:30px;
+ 	}
+	
+	.android  #reward-url  a {
+		 width:75%;
+ 	 }
+	
+     #reward-url  a {
+		 width:70%;
+		 font-size: 12px;	
+ 	 } 
+	 
+	#reward {
+		margin-left:0px;
+	    background-size: 30px  30px;
+		width:30px;
+		height:30px;
+	}
+	
+}
+
+
+.ios #sony-rewards, .android   #sony-rewards{
+	display: block;
+	height: 30px;
+	margin-top: -32px;
+	background: none !important;
+	position: relative;
+	z-index: 10;
+} 
+
+
+/* --------- iphone portrait -----------  */
+
+@media screen and (max-width: 361px) and (orientation: portrait) {
+
+	
+    .ios  #reward-url   {
+		 margin-top: -25px;
+		 margin-left:10px;
+		 height:25px;
+		 width:90%;  
+         	 
+	}
+	
+	.android   #reward-url {
+	     width:95%; 
+         margin-top: -22px;	 
+		 height:20px;	 
+         overflow:hidden;
+	}
+	
+	.ios #reward-url  a {
+		  width:90%;
+		  font-size: 6px;
+		  margin-top: 15px;
+	}
+	
+	 .android  #reward-url  a {
+		  font-size: 5px;
+	 } 
+	
+	.ios #reward  {
+		margin-left:0px;
+		width:20px;
+		height:20px;
+	    background-size: 20px 20px;
+		margin-top:5px;
+		
+	}
+	
+	.android  #reward {
+	    margin-left:0px;
+		width:15px;
+		height:15px;
+	    background-size: 15px 15px;
+		margin-top:5px;
+		 
+	}
+	
+	.ios #sony-rewards, .android   #sony-rewards{
+		display: block;
+		height: 20px;
+		margin-top: -22px;
+		background: none !important;
+		position: relative;
+		z-index: 10;
+	} 
+
+
+
+			
+}
+
+ 
+
+/* --------  iphone landscape-----------  */
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: landscape){
+
+   
+
+    .ios  #reward-url  {
+	     width:90%;   
+		 margin-top: -25px;
+		 margin-left:35px;
+		 height:25px;   
+	}
+	
+	.ios #reward-url  a {
+		 width:85%; 
+		 font-size: 9px;
+	}
+	
+	.ios #reward {
+		margin-left:0px;
+	    background-size: 25px 25px;
+		width:25px;
+		height:25px;
+	} 
+	
+	.android   #reward-url  {
+		 width:90%;   
+		 margin-top: -30px;
+		 margin-left:8%;
+		 height:30px;   
+	}
+
+	.android   #reward-url a {
+		width:75%; 
+		font-size: 8px;
+	}
+
+	.android  #reward {
+		margin-left:0px;
+		background-size: 25px 25px;
+		width:25px;
+		height:25px;
+	} 
+	
+ 	
+}

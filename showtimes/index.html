@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Here Comes The Boom - Showtimes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="decorator" content="html5treatments" />
+	  
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Here Comes the Boom is a new comedy about a high school biology teacher who becomes a mixed martial arts fighter to raise money for his school. In theaters October 12." />
+		<meta name="keywords" content="Here Comes the Boom movie, Kevin James, Salma Hayek, Charice, Henry Winkler, comedy" />
+		
+		<meta itemprop="name" content="Here Comes The Boom - Official Site">
+		<meta itemprop="description" content="Here Comes the Boom is a new comedy about a high school biology teacher who becomes a mixed martial arts fighter to raise money for his school. In theaters October 12.">
+		<meta itemprop="image" content="http://flash.sonypictures.com/shared/movies/herecomestheboom/hctb_FB200x200_siteA.jpg">
+
+		<meta property="og:title" content="Here Comes The Boom - Official Site" />
+		<meta property="og:description" content="Here Comes the Boom is a new comedy about a high school biology teacher who becomes a mixed martial arts fighter to raise money for his school. In theaters October 12." />
+		<meta property="og:type" content="movie" />
+		<meta property="og:url" content="http://boom-movie.com/mobile" />
+		<link rel="canonical" href="http://boom-movie.com"/>
+		<link rel="image_src" href="http://flash.sonypictures.com/shared/movies/herecomestheboom/hctb_FB200x200_siteA.jpg"/>
+		<meta property="og:image" content="http://flash.sonypictures.com/shared/movies/herecomestheboom/hctb_FB200x200_siteA.jpg" />
+		<meta property="og:site_name" content="Here Comes The Boom - Official Site" />
+
+        
+		<link rel="stylesheet" href="styles/fonts/stylesheet.css" />
+        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+		
+	    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+	    
+        <script type="text/javascript" src="http://flash.sonypictures.com/global/scripts/cufon/cufon.js"></script>
+	    <script type="text/javascript" src="http://flash.sonypictures.com/global/scripts/cufon/fonts/FuturaStd/FuturaStd-Light.font.js"></script>
+	    <script type="text/javascript" src="http://flash.sonypictures.com/global/scripts/cufon/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.font.js"></script>
+	    <script type="text/javascript" src="http://www.sonypictures.com/global/scripts/common.js"></script>
+
+        <script type="text/javascript">
+            //The following variables are required.
+            var movie = 69;//id of movie
+            var daysToShow = 7;//how many days in the future to show
+            var releaseDate = "2012/10/11";//the starting date formatted YYYY/MM/DD
+			var cur_domain = 'www.sonypictures.com';
+	        var fetchphp = "http://"+cur_domain+"/global/php/showtimes/fetch.php"; //The URL for fetch.php is set to the current domain automatically 
+			
+        </script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </head>
+    <body>
+	
+        <div id="head">
+			<a href="http://www.boom-movie.com/" target="_blank"><img src="images/header.jpg" alt="Here Comes The Boom October 12" width="100%" id="headerImage" /></a>			
+		</div>
+        <div id="search-bar">
+            <div id="search-desc" class="hidden cufon">Showtimes for <span id="search-date" class="cufon"></span></div>
+            <div id="search-form">
+                <label for="zip" class="cufon_label">Zip Code</label>
+				<input id="zip" class="def-blur" name="zip" type="text" value="Zip Code" />
+                <label for="date" class="cufon_label">Date</label>
+				<select id="date" name="date"></select>                				
+				<select id="year" name="year">
+                    <option value="2012" selected>2012</option>
+                </select>
+                <input id="search-btn" type="image" src="images/search.png" onclick="onClickSearchValidation()" value="SEARCH"/>
+            </div>
+            <div id="purchase-note">Purchases not made on this site</div>
+        </div>
+		<div id="listings"></div>
+        	
+        <p id="ratings"><a href="http://www.sonypictures.com/corp/privacy.html" rel="external">Privacy Policy</a> | <a href="http://www.sonypictures.com/corp/tos.html" rel="external">Terms of Use</a></p>
+
+	
+	</body>
+</html>
